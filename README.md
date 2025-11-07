@@ -38,10 +38,7 @@ The application allows clients to manage their website content autonomously, inc
 | **Styling**            | TailwindCSS v4               |
 | **State Management**   | Context API / Server Actions |
 | **Auth & Security**    | NextAuth / Middleware        |
-| **Persistence**        | Prisma + PostgreSQL          |
 | **Rendering Strategy** | SSR / ISR / CSR              |
-| **Hosting**            | Vercel                       |
-| **UI Components**      | ShadCN / Framer Motion       |
 
 ---
 
@@ -50,9 +47,7 @@ The application allows clients to manage their website content autonomously, inc
 - Build a **real-world CMS** from scratch using Next 16 and React 19.
 - Apply **Server Components** and **React Actions** for modern workflows.
 - Implement **secure authentication and role-based access**.
-- Practice **data persistence** using Prisma ORM with PostgreSQL.
 - Use **Tailwind v4** for responsive and consistent styling.
-- Enhance **UI animations** and feedback with Framer Motion.
 - Strengthen understanding of **Next.js App Router architecture**.
 
 ---
