@@ -1,0 +1,2 @@
+### FIND_ALL_POSTS
+GET http://localhost:3000/api/post
