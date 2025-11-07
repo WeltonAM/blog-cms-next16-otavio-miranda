@@ -1,4 +1,4 @@
-# 🧩 CMS Platform – Next 15 + React 19 + TailwindCSS v4
+# 🧩 CMS Platform – Next 16 + React 19 + TailwindCSS v4
 
 <div align="center">
   <a href="https://nextjs.org/" target="_blank">
@@ -22,7 +22,7 @@
 
 ## 🚀 About the Project
 
-This repository is part of my **modern web development practice**, focused on building a **complete CMS (Content Management System)** using the latest technologies — **Next.js 15**, **React 19**, and **TailwindCSS v4**.
+This repository is part of my **modern web development practice**, focused on building a **complete CMS (Content Management System)** using the latest technologies — **Next.js 16**, **React 19**, and **TailwindCSS v4**.
 
 The application allows clients to manage their website content autonomously, including **secure authentication**, **content persistence**, and **administrative control**, following the best practices in scalability and UI/UX design.
 
@@ -32,7 +32,7 @@ The application allows clients to manage their website content autonomously, inc
 
 | Category               | Tools / Concepts             |
 | ---------------------- | ---------------------------- |
-| **Framework**          | Next.js 15                   |
+| **Framework**          | Next.js 16                   |
 | **Language**           | TypeScript                   |
 | **Library**            | React 19                     |
 | **Styling**            | TailwindCSS v4               |
@@ -47,7 +47,7 @@ The application allows clients to manage their website content autonomously, inc
 
 ## 🎯 Learning Goals
 
-- Build a **real-world CMS** from scratch using Next 15 and React 19.
+- Build a **real-world CMS** from scratch using Next 16 and React 19.
 - Apply **Server Components** and **React Actions** for modern workflows.
 - Implement **secure authentication and role-based access**.
 - Practice **data persistence** using Prisma ORM with PostgreSQL.
@@ -104,7 +104,7 @@ npm start
 
 ## 🧠 Personal Notes
 
-This CMS project represents my exploration of **Next.js 15’s latest capabilities**, **React 19’s concurrent rendering**, and **modern Tailwind v4 design systems**.
+This CMS project represents my exploration of **Next.js 16’s latest capabilities**, **React 19’s concurrent rendering**, and **modern Tailwind v4 design systems**.
 
 It demonstrates **end-to-end development**, from authentication and API routes to UI design and deployment.
 
