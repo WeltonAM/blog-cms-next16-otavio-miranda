@@ -1,6 +1,0 @@
-{
-  "terminal.integrated.commandsToSkipShell": [],
-  "code-runner.executorMap": {
-    "typescript": "clear ; npx tsx"
-  }
-}
