@@ -11,7 +11,9 @@ export const SpinLoader = ({ externalClasses = "", internalClasses = "" }: SpinL
             <div
                 className={cn(
                     "w-10 h-10",
-                    "border-5 border-slate-900 border-t-transparent",
+                    "border-5",
+                    "border-slate-900 border-t-transparent",
+                    "dark:border-slate-100 dark:border-t-transparent",
                     "rounded-full animate-spin",
                     internalClasses
                 )}
