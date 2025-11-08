@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { sendErrorResponse } from "../../../backend/utils/sendErrorResponse";
-import { postRepository } from "../../../backend/repositories/json-post-repository";
+import { sendErrorResponse } from "../../../../backend/utils/sendErrorResponse";
+import { postRepository } from "../../../../backend/repositories/json-post-repository";
 
 export default async function findAllPosts(
   req: NextApiRequest,
