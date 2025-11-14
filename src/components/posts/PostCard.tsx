@@ -2,6 +2,7 @@ import { cn } from "@/utils/cn";
 import Image from "next/image";
 import Link from "next/link";
 import { PostModel } from "../../../core/post/models/post-model";
+import { formatDatetime, formatDistanceToNow } from "@/utils/formate-datetime";
 
 export interface PostCardProps {
     post: PostModel;
@@ -41,9 +42,10 @@ export function PostCard({ post }: PostCardProps) {
                         "text-slate-600",
                         "dark:text-slate-400",
                     )}
-                    dateTime="2023-01-01"
+                    dateTime={post.createdAt}
+                    title={formatDistanceToNow(post.createdAt)}
                 >
-                    {post.createdAt}
+                    {formatDatetime(post.createdAt)}
                 </time>
 
                 <Link

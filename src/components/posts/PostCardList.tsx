@@ -1,8 +1,15 @@
-import { postRepository } from "../../../backend/repositories/json-post-repository";
-import { PostCard } from "./PostCard";
+"use client";
 
-export default async function PostCardList() {
-    const posts = await postRepository.findAll();
+import { usePosts } from "@/data/hooks/use-posts.hook";
+import { PostCard } from "./PostCard";
+import LoadingComponent from "../shared/LoadingComponent";
+
+export default function PostCardList() {
+    const { posts, loadingPosts } = usePosts();
+
+    if (loadingPosts) {
+        return <LoadingComponent />;
+    }
 
     if (posts.length === 0) {
         return <div>No posts found</div>;
