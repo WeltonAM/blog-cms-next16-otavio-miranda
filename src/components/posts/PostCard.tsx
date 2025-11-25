@@ -18,7 +18,7 @@ export function PostCard({ post }: PostCardProps) {
             )}
         >
             <Link
-                href="#"
+                href={`post/${post.slug}`}
                 className="w-full h-full overflow-hidden rounded-xl"
             >
                 <Image
@@ -49,7 +49,7 @@ export function PostCard({ post }: PostCardProps) {
                 </time>
 
                 <Link
-                    href="#"
+                    href={`post/${post.slug}`}
                 >
                     <h1
                         className={cn(

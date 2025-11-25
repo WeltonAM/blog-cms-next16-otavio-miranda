@@ -1,0 +1,2 @@
+### FIND_POST_BY_SLUG
+GET http://localhost:3000/api/post/slug/rotina-matinal-de-pessoas-altamente-eficazes

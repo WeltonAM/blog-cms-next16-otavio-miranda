@@ -8,6 +8,7 @@ export interface PostsContext {
     posts: PostModel[];
     setPosts: any;
     loadingPosts: boolean;
+    getPostBySlug: (slug: string) => Promise<PostModel | null>;
 }
 
 const PostContext = createContext<PostsContext | undefined>(undefined);
@@ -29,6 +30,14 @@ export function PostProvider({ children }: { children: React.ReactNode }) {
         setLoadingPosts(false);
     }, []);
 
+    const getPostBySlug = useCallback(async (slug: string) => {
+        const response = await httpGet(`post/slug/${slug}`);
+        if (response.status === 200) {
+            return response.data;
+        }
+        return null;
+    }, []);
+
     useEffect(() => {
         fetchPosts();
     }, []);
@@ -38,7 +47,8 @@ export function PostProvider({ children }: { children: React.ReactNode }) {
             value={{
                 posts,
                 setPosts,
-                loadingPosts
+                loadingPosts,
+                getPostBySlug,
             }}
         >
             {children}

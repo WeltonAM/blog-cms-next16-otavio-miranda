@@ -25,6 +25,16 @@ export class JsonPostRepository implements PostRepository {
 
     return posts.find((post) => post.id === id) as PostModel;
   }
+
+  async findBySlug(slug: string): Promise<PostModel> {
+    const posts = await this.readFromDisk();
+
+    if (!posts.find((post) => post.slug === slug)) {
+      throw new Error(`Post with slug ${slug} not found`);
+    }
+
+    return posts.find((post) => post.slug === slug) as PostModel;
+  }
 }
 
 export const postRepository = new JsonPostRepository();

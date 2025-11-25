@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "CMS Platform",
+  title: {
+    default: "CMS Platform",
+    template: "%s | CMS Platform",
+  },
   description: "Content Management System Platform",
 };
 
