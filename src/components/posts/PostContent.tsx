@@ -4,9 +4,10 @@ import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeHighlight from "rehype-highlight";
-
+import rehypeSanitize from "rehype-sanitize";
 import { PostModel } from "../../../core/post/models/post-model";
 import { formatDatetime } from "@/utils/formate-datetime";
+import { cn } from "@/utils/cn";
 
 type PostContentProps = {
     post: PostModel;
@@ -41,7 +42,7 @@ export function PostContent({ post }: PostContentProps) {
                 )}
 
                 <div className="mt-6 flex items-center gap-3 text-sm text-gray-500 dark:text-gray-400">
-                    <div className="h-8 w-8 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white font-semibold">
+                    <div className="h-8 w-8 rounded-full bg-linear-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white font-semibold">
                         {post.author?.[0] ?? "A"}
                     </div>
 
@@ -55,10 +56,37 @@ export function PostContent({ post }: PostContentProps) {
 
             <hr className="border-gray-200 dark:border-gray-700 mb-10" />
 
-            <div className="prose prose-lg dark:prose-invert max-w-none">
+            <div
+                className={cn(
+                    "prose prose-slate dark:prose-invert",
+                    "prose-lg lg:prose-xl",
+                    "max-w-none",
+                    "overflow-hidden",
+                    "prose-a:transition",
+                    "prose-a:no-underline",
+                    "prose-a:text-blue-500",
+                    "prose-a:hover:text-blue-700",
+                    "prose-a:hover:underline",
+                    "prose-img:mx-auto"
+                )}
+            >
                 <ReactMarkdown
                     remarkPlugins={[remarkGfm]}
-                    rehypePlugins={[rehypeHighlight]}
+                    rehypePlugins={[
+                        rehypeHighlight,
+                        rehypeSanitize
+                    ]}
+                    components={{
+                        table: ({ node, ...props }) => {
+                            if (!node?.children) return "";
+
+                            return (
+                                <div className="overflow-x-auto">
+                                    <table className="w-full min-w-[600px]" {...props} />
+                                </div>
+                            );
+                        },
+                    }}
                 >
                     {post.content}
                 </ReactMarkdown>

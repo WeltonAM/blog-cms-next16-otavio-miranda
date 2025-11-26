@@ -17,7 +17,7 @@ export default function Footer() {
                 Developed with ❤️ by {" "}
                 <Link
                     target="_blank"
-                    href="https://github.com/WeltonAM"
+                    href="https://welton-matos-dev-portfolio.vercel.app/"
                     className="hover:text-teal-500"
                 >
                     WeltonMatosDev

@@ -20,6 +20,11 @@ export function PostProvider({ children }: { children: React.ReactNode }) {
     const [posts, setPosts] = useState<PostModel[]>([]);
     const [loadingPosts, setLoadingPosts] = useState(true);
 
+    // const sortByDate = (a: PostModel, b: PostModel) => {
+    //     return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+    // };
+    // posts.sort(sortByDate);
+
     const fetchPosts = useCallback(async () => {
         const respose = await httpGet("post");
 
