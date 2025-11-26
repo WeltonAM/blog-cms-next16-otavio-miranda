@@ -39,6 +39,8 @@ The application allows clients to manage their website content autonomously, inc
 | **State Management**   | Context API / Server Actions |
 | **Auth & Security**    | NextAuth / Middleware        |
 | **Rendering Strategy** | SSR / ISR / CSR              |
+| **ORM**                | DrizzleORM                   |
+| **DataBase**           | Sqlite                       |
 
 ---
 
